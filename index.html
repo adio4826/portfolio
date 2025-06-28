@@ -2,35 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arcadio Bignayan - Resume</title>
+  <title>Arcadio’s Digital Resume</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; color: #333; }
-    h1 { color: #2c3e50; }
-    section { margin-bottom: 2rem; }
-    .section-title { border-bottom: 2px solid #3498db; padding-bottom: 0.3rem; margin-bottom: 1rem; }
-    ul { list-style-type: none; padding-left: 0; }
-    ul li::before { content: "✔️ "; margin-right: 0.5rem; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .pane-fixed {
+      width: 35%;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .pane-scrollable {
+      width: 65%;
+      overflow-y: auto;
+      background-color: #ffffff;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Scrollbar styling */
+    .pane-scrollable::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .pane-scrollable::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .pane-fixed, .pane-scrollable {
+        width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Arcadio Bignayan</h1>
-  <p><strong>Location:</strong> Kenmore, WA | <strong>Email:</strong> arcadio@email.com | <strong>GitHub:</strong> <a href="https://github.com/adio4826">arcadio</a></p>
+  <div class="container">
+    <div class="pane-fixed">
+      <h1>Arcadio Smith</h1>
+      <p>Digital Explorer<br>Seattle, WA</p>
+    </div>
+    <div class="pane-scrollable">
+      <h2>Experience</h2>
+      <p>Freelance creator focused on cloud tools, affiliate content, and web design. Skilled in GitHub Pages, HTML/CSS, and integrating analytics.</p>
 
-  <section>
-    <h2 class="section-title">Summary</h2>
-    <p>Detail-oriented tech enthusiast exploring cloud storage, affiliate marketing, and GitHub integration...</p>
-  </section>
+      <h2>Projects</h2>
+      <p><strong>GitHub Resume:</strong> Live two-pane layout hosted on GitHub Pages using Codespaces.</p>
 
-  <section>
-    <h2 class="section-title">Skills</h2>
-    <ul>
-      <li>Cloud Platforms: Google Drive, OneDrive</li>
-      <li>Git & GitHub: Repo management, Pages, Codespaces</li>
-      <li>SEO & Affiliate Strategy: Zoho tools, Analytics</li>
-      <li>Monitor Technology: IPS vs VA knowledge</li>
-    </ul>
-  </section>
+      <h2>Education</h2>
+      <p>Self-guided learning in cloud architecture, privacy tools, and web technologies.</p>
 
-  <!-- More sections like Projects, Experience, Education can be added similarly -->
+      <p style="margin-top: 1000px;">End of content – scroll test.</p>
+    </div>
+  </div>
 </body>
 </html>
