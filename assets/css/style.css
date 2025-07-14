@@ -1,1 +1,63 @@
 
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .pane-fixed {
+      width: 35%;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .pane-scrollable {
+      width: 65%;
+      overflow-y: auto;
+      background-color: #ffffff;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Scrollbar styling */
+    .pane-scrollable::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .pane-scrollable::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .pane-fixed, .pane-scrollable {
+        width: 100%;
+        height: auto;
+      }
+    }
